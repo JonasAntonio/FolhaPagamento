@@ -16,6 +16,7 @@ public class Campo {
     private float referencia;
     private float vencimentos;
     private float descontos;
+    private String oi;
 
     public Campo() {
         

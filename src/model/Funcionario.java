@@ -19,7 +19,7 @@ public class Funcionario {
     private String rg;
     private Date dataNascimento;
     private String matricula;
-    private String endereço;
+    private String endereco;
     private String telefone;
     private Departamento departamento;
     private Cargo cargo;
@@ -27,13 +27,13 @@ public class Funcionario {
     public Funcionario() {
     }
 
-    public Funcionario(String nome, String cpf, String rg, Date dataNascimento, String matricula, String endereço, String telefone, Departamento departamento, Cargo cargo) {
+    public Funcionario(String nome, String cpf, String rg, Date dataNascimento, String matricula, String endereco, String telefone, Departamento departamento, Cargo cargo) {
         this.nome = nome;
         this.cpf = cpf;
         this.rg = rg;
         this.dataNascimento = dataNascimento;
         this.matricula = matricula;
-        this.endereço = endereço;
+        this.endereco = endereco;
         this.telefone = telefone;
         this.departamento = departamento;
         this.cargo = cargo;
@@ -79,12 +79,12 @@ public class Funcionario {
         this.matricula = matricula;
     }
 
-    public String getEndereço() {
-        return endereço;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setEndereço(String endereço) {
-        this.endereço = endereço;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getTelefone() {

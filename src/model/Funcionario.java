@@ -111,4 +111,9 @@ public class Funcionario {
         this.cargo = cargo;
     }
 
+    @Override
+    public String toString() {
+        return "Funcionario{" + "nome=" + nome + ", cpf=" + cpf + ", rg=" + rg + ", dataNascimento=" + dataNascimento + ", matricula=" + matricula + ", endereco=" + endereco + ", telefone=" + telefone + ", departamento=" + departamento + ", cargo=" + cargo + '}';
+    }
+
 }

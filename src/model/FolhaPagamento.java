@@ -50,5 +50,10 @@ public class FolhaPagamento {
     public void setData(Date data) {
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "FolhaPagamento{" + "campos=" + campos + ", funcionario=" + funcionario + ", data=" + data + '}';
+    }
     
 }

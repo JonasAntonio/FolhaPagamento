@@ -48,4 +48,9 @@ public class Departamento {
         this.gerente = gerente;
     }
 
+    @Override
+    public String toString() {
+        return "Departamento{" + "nome=" + nome + ", setor=" + setor + ", gerente=" + gerente + '}';
+    }
+    
 }

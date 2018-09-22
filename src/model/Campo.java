@@ -18,7 +18,7 @@ public class Campo {
     private float descontos;
 
     public Campo() {
-        
+      
     }
     
     public Campo(int codigo, String descricao, float referencia, float vencimentos, float descontos) {
@@ -68,6 +68,10 @@ public class Campo {
     public void setDescontos(float descontos) {
         this.descontos = descontos;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Campo{" + "codigo=" + codigo + ", descricao=" + descricao + ", referencia=" + referencia + ", vencimentos=" + vencimentos + ", descontos=" + descontos + '}';
+    }
     
 }

@@ -49,11 +49,11 @@ public class FuncionarioController {
         model.setRg(rg);
     }
 
-    public Date getDataNascimentoFuncionario() {
+    public String getDataNascimentoFuncionario() {
         return model.getDataNascimento();
     }
 
-    public void setDataNascimentoFuncionario(Date dataNascimento) {
+    public void setDataNascimentoFuncionario(String dataNascimento) {
         model.setDataNascimento(dataNascimento);
     }
 

@@ -42,11 +42,11 @@ public class FolhaPagamentoController {
         model.setFuncionario(funcionario);
     }
 
-    public Date getData() {
+    public String getData() {
         return model.getData();
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         model.setData(data);
     }
     

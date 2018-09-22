@@ -18,6 +18,7 @@ public class CampoView {
         System.out.println("Referência: " + referencia);
         System.out.println("Vencimentos: " + vencimentos);
         System.out.println("Descontos: " + descontos);
+        System.out.println("________________________________\n");
     }
     
 }

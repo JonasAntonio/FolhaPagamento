@@ -15,7 +15,7 @@ import model.Departamento;
  */
 public class FuncionarioView {
     
-    public void printDetalhesFuncionario(String nome, String cpf, String rg, Date dataNascimento, String matricula, String endereco, String telefone, Departamento departamento, Cargo cargo) {
+    public void printDetalhesFuncionario(String nome, String cpf, String rg, String dataNascimento, String matricula, String endereco, String telefone, Departamento departamento, Cargo cargo) {
         System.out.println("Funcionário: ");
         System.out.println("Nome: " + nome);
         System.out.println("CPF: " + cpf);
@@ -26,6 +26,7 @@ public class FuncionarioView {
         System.out.println("Telefone: " + telefone);
         System.out.println("Departamento: " + departamento.getNome());
         cargo.exibirInfo();
+        System.out.println("________________________________\n");
     }
     
 }

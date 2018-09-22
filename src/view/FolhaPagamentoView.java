@@ -16,12 +16,13 @@ import model.Funcionario;
  */
 public class FolhaPagamentoView {
     
-    public void printDetalhesFolhaPagamento(List<Campo> campos, Funcionario funcionario, Date data) {
+    public void printDetalhesFolhaPagamento(List<Campo> campos, Funcionario funcionario, String data) {
         System.out.println("Folha de Pagamento: ");
-        funcionario.toString();
+        System.out.println(funcionario.toString());
         System.out.println("Data: " + data);
         for (Campo campo : campos) {
-            campo.toString();
+            System.out.println(campo.toString());
         }
+        System.out.println("________________________________\n");
     }
 }

@@ -18,6 +18,11 @@ public class Departamento {
     public Departamento() {
     }
 
+    public Departamento(String nome, String setor) {
+        this.nome = nome;
+        this.setor = setor;
+    }
+
     public Departamento(String nome, String setor, Funcionario gerente) {
         this.nome = nome;
         this.setor = setor;

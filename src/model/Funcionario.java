@@ -6,7 +6,6 @@
 package model;
 
 import interfaces.Cargo;
-import java.util.Date;
 
 /**
  *
@@ -17,7 +16,7 @@ public class Funcionario {
     private String nome;
     private String cpf;
     private String rg;
-    private Date dataNascimento;
+    private String dataNascimento;
     private String matricula;
     private String endereco;
     private String telefone;
@@ -27,7 +26,7 @@ public class Funcionario {
     public Funcionario() {
     }
 
-    public Funcionario(String nome, String cpf, String rg, Date dataNascimento, String matricula, String endereco, String telefone, Departamento departamento, Cargo cargo) {
+    public Funcionario(String nome, String cpf, String rg, String dataNascimento, String matricula, String endereco, String telefone, Departamento departamento, Cargo cargo) {
         this.nome = nome;
         this.cpf = cpf;
         this.rg = rg;
@@ -63,11 +62,11 @@ public class Funcionario {
         this.rg = rg;
     }
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -113,7 +112,16 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario{" + "nome=" + nome + ", cpf=" + cpf + ", rg=" + rg + ", dataNascimento=" + dataNascimento + ", matricula=" + matricula + ", endereco=" + endereco + ", telefone=" + telefone + ", departamento=" + departamento + ", cargo=" + cargo + '}';
+        return "Funcionario {" + 
+                "\n\tnome=" + nome + 
+                "\n\tcpf=" + cpf + 
+                "\n\trg=" + rg + 
+                "\n\tdataNascimento=" + dataNascimento + 
+                "\n\tmatricula=" + matricula + 
+                "\n\tendereco=" + endereco + 
+                "\n\ttelefone=" + telefone + 
+                "\n\tdepartamento=" + departamento.getNome() + 
+                "\n\tcargo=" + cargo.toString() + "}";
     }
 
 }

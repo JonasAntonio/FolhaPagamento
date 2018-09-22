@@ -6,7 +6,6 @@
 package model;
 
 import interfaces.Cargo;
-import java.util.Date;
 
 /**
  *
@@ -17,9 +16,9 @@ public class Funcionario {
     private String nome;
     private String cpf;
     private String rg;
-    private Date dataNascimento;
+    private String dataNascimento;
     private String matricula;
-    private String endereço;
+    private String endereco;
     private String telefone;
     private Departamento departamento;
     private Cargo cargo;
@@ -27,13 +26,13 @@ public class Funcionario {
     public Funcionario() {
     }
 
-    public Funcionario(String nome, String cpf, String rg, Date dataNascimento, String matricula, String endereço, String telefone, Departamento departamento, Cargo cargo) {
+    public Funcionario(String nome, String cpf, String rg, String dataNascimento, String matricula, String endereco, String telefone, Departamento departamento, Cargo cargo) {
         this.nome = nome;
         this.cpf = cpf;
         this.rg = rg;
         this.dataNascimento = dataNascimento;
         this.matricula = matricula;
-        this.endereço = endereço;
+        this.endereco = endereco;
         this.telefone = telefone;
         this.departamento = departamento;
         this.cargo = cargo;
@@ -63,11 +62,11 @@ public class Funcionario {
         this.rg = rg;
     }
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -79,12 +78,12 @@ public class Funcionario {
         this.matricula = matricula;
     }
 
-    public String getEndereço() {
-        return endereço;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setEndereço(String endereço) {
-        this.endereço = endereço;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
     public String getTelefone() {
@@ -109,6 +108,20 @@ public class Funcionario {
 
     public void setCargo(Cargo cargo) {
         this.cargo = cargo;
+    }
+
+    @Override
+    public String toString() {
+        return "Funcionario {" + 
+                "\n\tnome=" + nome + 
+                "\n\tcpf=" + cpf + 
+                "\n\trg=" + rg + 
+                "\n\tdataNascimento=" + dataNascimento + 
+                "\n\tmatricula=" + matricula + 
+                "\n\tendereco=" + endereco + 
+                "\n\ttelefone=" + telefone + 
+                "\n\tdepartamento=" + departamento.getNome() + 
+                "\n\tcargo=" + cargo.toString() + "}";
     }
 
 }

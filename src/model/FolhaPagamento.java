@@ -5,7 +5,6 @@
  */
 package model;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,12 +15,12 @@ public class FolhaPagamento {
     
     private List<Campo> campos;
     private Funcionario funcionario;
-    private Date data;
+    private String data;
 
     public FolhaPagamento() {
     }
 
-    public FolhaPagamento(List<Campo> campos, Funcionario funcionario, Date data) {
+    public FolhaPagamento(List<Campo> campos, Funcionario funcionario, String data) {
         this.campos = campos;
         this.funcionario = funcionario;
         this.data = data;
@@ -43,12 +42,17 @@ public class FolhaPagamento {
         this.funcionario = funcionario;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "FolhaPagamento{" + "campos=" + campos + ", funcionario=" + funcionario + ", data=" + data + '}';
     }
     
 }

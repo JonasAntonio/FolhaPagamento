@@ -18,6 +18,11 @@ public class Departamento {
     public Departamento() {
     }
 
+    public Departamento(String nome, String setor) {
+        this.nome = nome;
+        this.setor = setor;
+    }
+
     public Departamento(String nome, String setor, Funcionario gerente) {
         this.nome = nome;
         this.setor = setor;
@@ -48,4 +53,9 @@ public class Departamento {
         this.gerente = gerente;
     }
 
+    @Override
+    public String toString() {
+        return "Departamento{" + "nome=" + nome + ", setor=" + setor + ", gerente=" + gerente + '}';
+    }
+    
 }

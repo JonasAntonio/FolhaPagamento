@@ -44,7 +44,7 @@ public class FolhaPagamentoPrincipal {
 
         // Models Campos
         Campo salario = new Campo(1, "salário", 1, 0, 0);
-        Campo inss = new Campo(2, "INSS", 0.12f, 0, 0);
+        Campo inss = new Campo(2, "INSS", 0.08f, 0, 0);
         Campo valeTransporte = new Campo(3, "Vale Transporte", 0.06f, 0, 0);
         Campo planoSaude = new Campo(4, "Plano de Saúde", 0.04f, 0, 0);
 
@@ -78,12 +78,12 @@ public class FolhaPagamentoPrincipal {
         Departamento departamento3 = new Departamento("Administração", "RH");
 
         //Models Funcionarios
-        Funcionario funcionario1 = new Funcionario("Douglas", "111.111.111-11", "MG-1.111.111", "1991:01:01", "1", "Rua 1", "(32)1111-1111", departamento1, cargoGerente);
-        Funcionario funcionario2 = new Funcionario("Jonas", "222.222.222-22", "MG-2.222.222", "1991:02:02", "2", "Rua 1", "(32)1111-1111", departamento2, cargoGerente);
-        Funcionario funcionario3 = new Funcionario("Juan", "333.333.333-33", "MG-3.333.333", "1991:03:03", "3", "Rua 1", "(32)1111-1111", departamento1, cargoAnalista);
-        Funcionario funcionario4 = new Funcionario("Lucas", "444.444.444-44", "MG-4.444.444", "1991:04:04", "4", "Rua 1", "(32)1111-1111", departamento3, cargoGerente);
-        Funcionario funcionario5 = new Funcionario("José", "555.555.555-55", "MG-5.555.555", "1991:05:05", "5", "Rua 1", "(32)1111-1111", departamento3, cargoAdministrativo);
-        Funcionario funcionario6 = new Funcionario("Alen", "666.666.666-66", "MG-6.666.666", "1991:06:06", "6", "Rua 1", "(32)1111-1111", departamento2, cargoSuporte);
+        Funcionario funcionario1 = new Funcionario("Douglas", "111.111.111-11", "MG-1.111.111", "1991:01:01", "1", "Rua 1", "(32)1111-1111", departamento1, cargoGerente, 4, 5000.0f);
+        Funcionario funcionario2 = new Funcionario("Jonas", "222.222.222-22", "MG-2.222.222", "1991:02:02", "2", "Rua 1", "(32)1111-1111", departamento2, cargoGerente, 4, 5000.0f);
+        Funcionario funcionario3 = new Funcionario("Juan", "333.333.333-33", "MG-3.333.333", "1991:03:03", "3", "Rua 1", "(32)1111-1111", departamento1, cargoAnalista, 2, 2500.0f);
+        Funcionario funcionario4 = new Funcionario("Lucas", "444.444.444-44", "MG-4.444.444", "1991:04:04", "4", "Rua 1", "(32)1111-1111", departamento3, cargoGerente, 2, 4000.0f);
+        Funcionario funcionario5 = new Funcionario("José", "555.555.555-55", "MG-5.555.555", "1991:05:05", "5", "Rua 1", "(32)1111-1111", departamento3, cargoAdministrativo, 4, 2500.0f);
+        Funcionario funcionario6 = new Funcionario("Alen", "666.666.666-66", "MG-6.666.666", "1991:06:06", "6", "Rua 1", "(32)1111-1111", departamento2, cargoSuporte, 2, 2000.0f);
 
         //Instanciando os gerentes
         departamento1.setGerente(funcionario1);

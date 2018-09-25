@@ -51,7 +51,8 @@ public class FolhaPagamentoController {
     }
 
     public void atualizaView() {
-        view.printDetalhesFolhaPagamento(model.getCampos(), model.getFuncionario(), model.getData());
+        view.printDetalhesFolhaPagamento(model.getCampos(), model.getFuncionario(), model.getData(),
+                model.calcularSalarioLiquido(), model.calcularTotalDescontos(), model.calcularTotalVencimentos());
     }
 
 }

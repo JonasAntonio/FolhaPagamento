@@ -12,27 +12,13 @@ import interfaces.Cargo;
  * @author alunoces
  */
 public class CargoAdministrativo implements Cargo {
-    
-    private float salarioBase;
 
     public CargoAdministrativo() {
     }
 
-    public CargoAdministrativo(float salarioBase) {
-        this.salarioBase = salarioBase;
-    }
-    
     @Override
     public void exibirInfo() {
         System.out.println("Cargo: Administrador de Sistemas");
     }
 
-    public float getSalarioBase() {
-        return salarioBase;
-    }
-
-    public void setSalarioBase(float salarioBase) {
-        this.salarioBase = salarioBase;
-    }
- 
 }

@@ -11,7 +11,7 @@ import model.cargo.CargoAnalista;
 
 /**
  *
- * @author alunoces
+ * @author douglas, jonas, juan e lucas
  */
 public class FabricaAnalista implements FabricaCargos {
 
@@ -19,5 +19,5 @@ public class FabricaAnalista implements FabricaCargos {
     public Cargo criarCargo() {
         return new CargoAnalista();
     }
-    
+
 }

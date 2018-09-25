@@ -11,7 +11,7 @@ import model.cargo.CargoAdministrativo;
 
 /**
  *
- * @author alunoces
+ * @author douglas, jonas, juan e lucas
  */
 public class FabricaAdministrativo implements FabricaCargos {
 
@@ -19,5 +19,5 @@ public class FabricaAdministrativo implements FabricaCargos {
     public Cargo criarCargo() {
         return new CargoAdministrativo();
     }
-    
+
 }

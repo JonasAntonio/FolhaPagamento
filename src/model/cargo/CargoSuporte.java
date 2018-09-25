@@ -9,7 +9,7 @@ import interfaces.Cargo;
 
 /**
  *
- * @author alunoces
+ * @author douglas, jonas, juan e lucas
  */
 public class CargoSuporte implements Cargo {
 
@@ -17,8 +17,8 @@ public class CargoSuporte implements Cargo {
     }
 
     @Override
-    public void exibirInfo() {
-        System.out.println("Cargo: Suporte de Sistemas");
+    public String exibirInfo() {
+        return "Suporte de Sistemas";
     }
 
 }

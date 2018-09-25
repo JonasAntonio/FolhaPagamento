@@ -9,7 +9,7 @@ import interfaces.Cargo;
 
 /**
  *
- * @author alunoces
+ * @author douglas, jonas, juan e lucas
  */
 public class CargoAdministrativo implements Cargo {
 
@@ -17,8 +17,8 @@ public class CargoAdministrativo implements Cargo {
     }
 
     @Override
-    public void exibirInfo() {
-        System.out.println("Cargo: Administrador de Sistemas");
+    public String exibirInfo() {
+        return "Administrador de Sistemas";
     }
 
 }

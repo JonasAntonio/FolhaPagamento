@@ -11,7 +11,7 @@ import model.cargo.CargoGerente;
 
 /**
  *
- * @author alunoces
+ * @author douglas, jonas, juan e lucas
  */
 public class FabricaGerente implements FabricaCargos {
 
@@ -19,5 +19,5 @@ public class FabricaGerente implements FabricaCargos {
     public Cargo criarCargo() {
         return new CargoGerente();
     }
-    
+
 }

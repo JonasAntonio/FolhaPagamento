@@ -9,7 +9,7 @@ import interfaces.Cargo;
 
 /**
  *
- * @author Jonas Antônio Gomes Vicente
+ * @author douglas, jonas, juan e lucas
  */
 public class Funcionario {
 
@@ -112,16 +112,16 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario {" + 
-                "\n\tnome=" + nome + 
-                "\n\tcpf=" + cpf + 
-                "\n\trg=" + rg + 
-                "\n\tdataNascimento=" + dataNascimento + 
-                "\n\tmatricula=" + matricula + 
-                "\n\tendereco=" + endereco + 
-                "\n\ttelefone=" + telefone + 
-                "\n\tdepartamento=" + departamento.getNome() + 
-                "\n\tcargo=" + cargo.toString() + "}";
+        return "Funcionario {"
+                + "\n\tnome=" + nome
+                + "\n\tcpf=" + cpf
+                + "\n\trg=" + rg
+                + "\n\tdataNascimento=" + dataNascimento
+                + "\n\tmatricula=" + matricula
+                + "\n\tendereco=" + endereco
+                + "\n\ttelefone=" + telefone
+                + "\n\tdepartamento=" + departamento.getNome()
+                + "\n\tcargo=" + cargo.exibirInfo() + " }";
     }
 
 }

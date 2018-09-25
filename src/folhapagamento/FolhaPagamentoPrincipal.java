@@ -10,6 +10,7 @@ import controller.DepartamentoController;
 import controller.FolhaPagamentoController;
 import controller.FuncionarioController;
 import interfaces.Cargo;
+import interfaces.FabricaCargos;
 import model.Campo;
 import model.Departamento;
 import model.Funcionario;
@@ -18,6 +19,10 @@ import model.cargo.CargoAdministrativo;
 import model.cargo.CargoAnalista;
 import model.cargo.CargoGerente;
 import model.cargo.CargoSuporte;
+import model.fabrica.FabricaAdministrativo;
+import model.fabrica.FabricaAnalista;
+import model.fabrica.FabricaGerente;
+import model.fabrica.FabricaSuporte;
 import single.Singleton;
 import view.CampoView;
 import view.DepartamentoView;
@@ -26,7 +31,7 @@ import view.FuncionarioView;
 
 /**
  *
- * @author Jonas Antônio Gomes Vicente
+ * @author douglas, jonas, juan e lucas
  */
 public class FolhaPagamentoPrincipal {
 
@@ -50,10 +55,22 @@ public class FolhaPagamentoPrincipal {
         singleton.campos.add(planoSaude);
 
         //Models Cargo
-        Cargo cargoAdministrativo = new CargoAdministrativo();
-        Cargo cargoAnalista = new CargoAnalista();
-        Cargo cargoGerente = new CargoGerente();
-        Cargo cargoSuporte = new CargoSuporte();
+        Cargo cargoAdministrativo;
+        Cargo cargoAnalista;
+        Cargo cargoGerente;
+        Cargo cargoSuporte;
+
+        FabricaCargos cargo1 = new FabricaAdministrativo();
+        cargoAdministrativo = cargo1.criarCargo();
+
+        FabricaCargos cargo2 = new FabricaAnalista();
+        cargoAnalista = cargo2.criarCargo();
+
+        FabricaCargos cargo3 = new FabricaGerente();
+        cargoGerente = cargo3.criarCargo();
+
+        FabricaCargos cargo4 = new FabricaSuporte();
+        cargoSuporte = cargo4.criarCargo();
 
         //Models Departamento
         Departamento departamento1 = new Departamento("Operações", "Informática");

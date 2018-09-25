@@ -9,10 +9,10 @@ import java.util.List;
 
 /**
  *
- * @author alunoces
+ * @author douglas, jonas, juan e lucas
  */
 public class FolhaPagamento {
-    
+
     private List<Campo> campos;
     private Funcionario funcionario;
     private String data;
@@ -54,5 +54,5 @@ public class FolhaPagamento {
     public String toString() {
         return "FolhaPagamento{" + "campos=" + campos + ", funcionario=" + funcionario + ", data=" + data + '}';
     }
-    
+
 }

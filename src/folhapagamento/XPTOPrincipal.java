@@ -15,10 +15,6 @@ import model.Campo;
 import model.Departamento;
 import model.Funcionario;
 import model.FolhaPagamento;
-import model.cargo.CargoAdministrativo;
-import model.cargo.CargoAnalista;
-import model.cargo.CargoGerente;
-import model.cargo.CargoSuporte;
 import model.fabrica.FabricaAdministrativo;
 import model.fabrica.FabricaAnalista;
 import model.fabrica.FabricaGerente;
@@ -33,7 +29,7 @@ import view.FuncionarioView;
  *
  * @author douglas, jonas, juan e lucas
  */
-public class FolhaPagamentoPrincipal {
+public class XPTOPrincipal {
 
     /**
      * @param args the command line arguments

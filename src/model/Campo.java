@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author alunoces
+ * @author Juan Ferreira Carlos
  */
 public class Campo {
     

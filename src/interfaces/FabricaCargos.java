@@ -7,7 +7,7 @@ package interfaces;
 
 /**
  *
- * @author alunoces
+ * @author Juan Ferreira Carlos
  */
 public interface FabricaCargos {
     

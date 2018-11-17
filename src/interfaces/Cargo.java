@@ -7,10 +7,10 @@ package interfaces;
 
 /**
  *
- * @author Juan Ferreira Carlos
+ * @author douglas, jonas, juan e lucas
  */
 public interface Cargo {
-    
-    public void exibirInfo();
-    
+
+    public String exibirInfo();
+
 }

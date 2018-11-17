@@ -7,10 +7,10 @@ package model;
 
 /**
  *
- * @author Juan Ferreira Carlos
+ * @author douglas, jonas, juan e lucas
  */
 public class Campo {
-    
+
     private int codigo;
     private String descricao;
     private float referencia;
@@ -18,9 +18,9 @@ public class Campo {
     private float descontos;
 
     public Campo() {
-      
+
     }
-    
+
     public Campo(int codigo, String descricao, float referencia, float vencimentos, float descontos) {
         this.codigo = codigo;
         this.descricao = descricao;
@@ -73,5 +73,5 @@ public class Campo {
     public String toString() {
         return "Campo{" + "codigo=" + codigo + ", descricao=" + descricao + ", referencia=" + referencia + ", vencimentos=" + vencimentos + ", descontos=" + descontos + '}';
     }
-    
+
 }

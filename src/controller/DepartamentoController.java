@@ -11,10 +11,10 @@ import view.DepartamentoView;
 
 /**
  *
- * @author juan
+ * @author douglas, jonas, juan e lucas
  */
 public class DepartamentoController {
-    
+
     private final Departamento model;
     private final DepartamentoView view;
 
@@ -22,7 +22,7 @@ public class DepartamentoController {
         this.model = model;
         this.view = view;
     }
-    
+
     public String getNomeDepartamento() {
         return model.getNome();
     }
@@ -46,9 +46,9 @@ public class DepartamentoController {
     public void setGerente(Funcionario gerente) {
         model.setGerente(gerente);
     }
-    
+
     public void atualizaView() {
         view.printDetalhesDepartamento(model.getNome(), model.getSetor(), model.getGerente());
     }
-    
+
 }

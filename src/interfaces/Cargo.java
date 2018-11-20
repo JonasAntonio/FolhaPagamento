@@ -7,10 +7,12 @@ package interfaces;
 
 /**
  *
- * @author douglas, jonas, juan e lucas
+ * @author alunoces
  */
 public interface Cargo {
-
-    public String exibirInfo();
-
+    
+    public void exibirInfo();
+    
+    public float getSalarioBase();
+    
 }

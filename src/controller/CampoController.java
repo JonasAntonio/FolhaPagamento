@@ -10,16 +10,15 @@ import view.CampoView;
 
 /**
  *
- * @author douglas, jonas, juan e lucas
+ * @author juan
  */
 public class CampoController {
-
     private final Campo model;
     private final CampoView view;
 
-    public CampoController(Campo model, CampoView view) {
-        this.model = model;
-        this.view = view;
+    public CampoController(Campo model, CampoView view){
+	this.model = model;
+	this.view = view;
     }
 
     public CampoController() {
@@ -65,8 +64,8 @@ public class CampoController {
     public void setDescontosCampo(float descontos) {
         model.setDescontos(descontos);
     }
-
-    public void atualizaView() {
+    
+    public void atualizaView(){				
         view.printDetalhesCampo(model.getCodigo(), model.getDescricao(), model.getReferencia(), model.getVencimentos(), model.getDescontos());
-    }
+    }	
 }

@@ -6,17 +6,16 @@
 package controller;
 
 import interfaces.Cargo;
-import java.util.Date;
 import model.Departamento;
 import model.Funcionario;
 import view.FuncionarioView;
 
 /**
  *
- * @author douglas, jonas, juan e lucas
+ * @author juan
  */
 public class FuncionarioController {
-
+    
     private final Funcionario model;
     private final FuncionarioView view;
 
@@ -24,7 +23,7 @@ public class FuncionarioController {
         this.model = model;
         this.view = view;
     }
-
+    
     public String getNomeFuncionario() {
         return model.getNome();
     }
@@ -96,9 +95,9 @@ public class FuncionarioController {
     public void setCargoFuncionario(Cargo cargo) {
         model.setCargo(cargo);
     }
-
+    
     public void atualizaView() {
         view.printDetalhesFuncionario(model.getNome(), model.getCpf(), model.getRg(), model.getDataNascimento(), model.getMatricula(), model.getEndereco(), model.getTelefone(), model.getDepartamento(), model.getCargo());
     }
-
+    
 }

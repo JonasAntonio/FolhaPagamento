@@ -5,7 +5,6 @@
  */
 package controller;
 
-import java.util.Date;
 import java.util.List;
 import model.Campo;
 import model.FolhaPagamento;
@@ -14,10 +13,10 @@ import view.FolhaPagamentoView;
 
 /**
  *
- * @author douglas, jonas, juan e lucas
+ * @author juan
  */
 public class FolhaPagamentoController {
-
+    
     private final FolhaPagamento model;
     private final FolhaPagamentoView view;
 
@@ -25,7 +24,7 @@ public class FolhaPagamentoController {
         this.model = model;
         this.view = view;
     }
-
+    
     public List<Campo> getCampos() {
         return model.getCampos();
     }
@@ -49,10 +48,9 @@ public class FolhaPagamentoController {
     public void setData(String data) {
         model.setData(data);
     }
-
+    
     public void atualizaView() {
-        view.printDetalhesFolhaPagamento(model.getCampos(), model.getFuncionario(), model.getData(),
-                model.calcularSalarioLiquido(), model.calcularTotalDescontos(), model.calcularTotalVencimentos());
+        view.printDetalhesFolhaPagamento(model.getCampos(), model.getFuncionario(), model.getData());
     }
-
+    
 }

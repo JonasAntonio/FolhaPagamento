@@ -11,13 +11,13 @@ import model.cargo.CargoSuporte;
 
 /**
  *
- * @author douglas, jonas, juan e lucas
+ * @author alunoces
  */
 public class FabricaSuporte implements FabricaCargos {
 
     @Override
     public Cargo criarCargo() {
         return new CargoSuporte();
-    }
-
+    }     
+    
 }

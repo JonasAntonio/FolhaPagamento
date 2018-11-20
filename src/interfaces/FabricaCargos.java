@@ -7,10 +7,10 @@ package interfaces;
 
 /**
  *
- * @author douglas, jonas, juan e lucas
+ * @author alunoces
  */
 public interface FabricaCargos {
-
+    
     public Cargo criarCargo();
-
+    
 }

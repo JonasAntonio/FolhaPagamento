@@ -9,10 +9,10 @@ import java.util.List;
 
 /**
  *
- * @author douglas, jonas, juan e lucas
+ * @author alunoces
  */
 public class FolhaPagamento {
-
+    
     private List<Campo> campos;
     private Funcionario funcionario;
     private String data;
@@ -27,10 +27,6 @@ public class FolhaPagamento {
     }
 
     public List<Campo> getCampos() {
-        campos.get(0).setVencimentos(this.funcionario.getSalario());
-        campos.get(1).setDescontos(this.funcionario.inss());
-        campos.get(2).setDescontos(this.funcionario.valeTransporte());
-        campos.get(3).setDescontos(this.funcionario.planoSaude());
         return campos;
     }
 
@@ -56,27 +52,7 @@ public class FolhaPagamento {
 
     @Override
     public String toString() {
-        return "FolhaPagamento{" + "Campos= " + campos + ", Funcionario= " + funcionario + ", Data= " + data + "}";
+        return "FolhaPagamento{" + "campos=" + campos + ", funcionario=" + funcionario + ", data=" + data + '}';
     }
-
-    public float calcularTotalVencimentos() {
-        float vencimento = 0.0f;
-        for (Campo campo : campos) {
-            vencimento += campo.getVencimentos();
-        }
-        return vencimento;
-    }
-
-    public float calcularTotalDescontos() {
-        float desconto = 0.0f;
-        for (Campo campo : campos) {
-            desconto += campo.getDescontos();
-        }
-        return desconto;
-    }
-
-    public float calcularSalarioLiquido() {
-        return calcularTotalVencimentos() - calcularTotalDescontos();
-    }
-
+    
 }

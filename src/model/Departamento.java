@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author douglas, jonas, juan e lucas
+ * @author Jonas Antônio Gomes Vicente
  */
 public class Departamento {
 
@@ -57,5 +57,5 @@ public class Departamento {
     public String toString() {
         return "Departamento{" + "nome=" + nome + ", setor=" + setor + ", gerente=" + gerente + '}';
     }
-
+    
 }

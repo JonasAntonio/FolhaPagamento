@@ -9,6 +9,9 @@ import java.util.List;
 import model.Campo;
 import model.FolhaPagamento;
 import model.Funcionario;
+import strategy.SalarioComPremiacao;
+import strategy.SalarioSemPremiacao;
+import strategy.SalarioStrategy;
 import view.FolhaPagamentoView;
 
 /**
@@ -19,6 +22,7 @@ public class FolhaPagamentoController {
     
     private final FolhaPagamento model;
     private final FolhaPagamentoView view;
+    private SalarioStrategy estrategiaSalario;
 
     public FolhaPagamentoController(FolhaPagamento model, FolhaPagamentoView view) {
         this.model = model;
@@ -50,7 +54,17 @@ public class FolhaPagamentoController {
     }
     
     public void atualizaView() {
-        view.printDetalhesFolhaPagamento(model.getCampos(), model.getFuncionario(), model.getData());
+        view.printDetalhesFolhaPagamento(model.getCampos(), model.getFuncionario(), model.getData(), model.getFuncionario().isPremiacao(), this.calcularSalario());
+    }
+    
+    public float calcularSalario() {
+        if(this.model.getFuncionario().isPremiacao()) {
+            estrategiaSalario = new SalarioComPremiacao();
+            return estrategiaSalario.calcularSalario(this.model.getFuncionario());
+        } else {
+            estrategiaSalario = new SalarioSemPremiacao();
+            return estrategiaSalario.calcularSalario(this.model.getFuncionario());
+        }
     }
     
 }

@@ -16,13 +16,16 @@ import model.Funcionario;
  */
 public class FolhaPagamentoView {
     
-    public void printDetalhesFolhaPagamento(List<Campo> campos, Funcionario funcionario, String data) {
+    public void printDetalhesFolhaPagamento(List<Campo> campos, Funcionario funcionario, String data,
+            boolean premiacao, float salarioFinal) {
         System.out.println("Folha de Pagamento: ");
         System.out.println(funcionario.toString());
         System.out.println("Data: " + data);
+        System.out.println("Premiação: " + premiacao);
         for (Campo campo : campos) {
             System.out.println(campo.toString());
         }
+        System.out.println("Valor Total à Receber: R$ " + salarioFinal);
         System.out.println("________________________________\n");
     }
 }

@@ -6,7 +6,6 @@
 package view;
 
 import interfaces.Cargo;
-import java.util.Date;
 import model.Departamento;
 
 /**
@@ -15,7 +14,9 @@ import model.Departamento;
  */
 public class FuncionarioView {
     
-    public void printDetalhesFuncionario(String nome, String cpf, String rg, String dataNascimento, String matricula, String endereco, String telefone, Departamento departamento, Cargo cargo) {
+    public void printDetalhesFuncionario(String nome, String cpf, String rg, 
+            String dataNascimento, String matricula, String endereco, String telefone,
+            Departamento departamento, Cargo cargo, boolean premiacao) {
         System.out.println("Funcionário: ");
         System.out.println("Nome: " + nome);
         System.out.println("CPF: " + cpf);
@@ -26,6 +27,7 @@ public class FuncionarioView {
         System.out.println("Telefone: " + telefone);
         System.out.println("Departamento: " + departamento.getNome());
         cargo.exibirInfo();
+        System.out.println("Premiado: " + premiacao);
         System.out.println("________________________________\n");
     }
     

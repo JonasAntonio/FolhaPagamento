@@ -11,7 +11,7 @@ import model.Funcionario;
  *
  * @author jonas
  */
-public class SalarioSemPremiacao implements Strategy{
+public class SalarioSemPremiacao implements SalarioStrategy{
 
     /**
      *

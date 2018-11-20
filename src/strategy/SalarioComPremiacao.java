@@ -11,7 +11,7 @@ import model.Funcionario;
  *
  * @author jonas
  */
-public class SalarioComPremiacao implements Strategy {
+public class SalarioComPremiacao implements SalarioStrategy {
     
     private float valorPremiacao;
 
@@ -26,7 +26,7 @@ public class SalarioComPremiacao implements Strategy {
     @Override
     public float calcularSalario(Funcionario funcionario) {
         float salarioBase = funcionario.getCargo().getSalarioBase();
-        return salarioBase + this.getValorPremiacao();
+        return salarioBase + 300;
     }
     
 }

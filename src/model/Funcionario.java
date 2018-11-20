@@ -22,6 +22,7 @@ public class Funcionario {
     private String telefone;
     private Departamento departamento;
     private Cargo cargo;
+    private boolean premiacao;
 
     public Funcionario() {
     }
@@ -36,6 +37,19 @@ public class Funcionario {
         this.telefone = telefone;
         this.departamento = departamento;
         this.cargo = cargo;
+    }
+
+    public Funcionario(String nome, String cpf, String rg, String dataNascimento, String matricula, String endereco, String telefone, Departamento departamento, Cargo cargo, boolean premiacao) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.dataNascimento = dataNascimento;
+        this.matricula = matricula;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.departamento = departamento;
+        this.cargo = cargo;
+        this.premiacao = premiacao;
     }
 
     public String getNome() {
@@ -108,6 +122,14 @@ public class Funcionario {
 
     public void setCargo(Cargo cargo) {
         this.cargo = cargo;
+    }
+
+    public boolean isPremiacao() {
+        return premiacao;
+    }
+
+    public void setPremiacao(boolean premiacao) {
+        this.premiacao = premiacao;
     }
 
     @Override

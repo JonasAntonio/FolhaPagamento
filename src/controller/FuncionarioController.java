@@ -8,6 +8,9 @@ package controller;
 import interfaces.Cargo;
 import model.Departamento;
 import model.Funcionario;
+import strategy.SalarioComPremiacao;
+import strategy.SalarioSemPremiacao;
+import strategy.SalarioStrategy;
 import view.FuncionarioView;
 
 /**
@@ -18,6 +21,7 @@ public class FuncionarioController {
     
     private final Funcionario model;
     private final FuncionarioView view;
+    
 
     public FuncionarioController(Funcionario model, FuncionarioView view) {
         this.model = model;
@@ -97,7 +101,9 @@ public class FuncionarioController {
     }
     
     public void atualizaView() {
-        view.printDetalhesFuncionario(model.getNome(), model.getCpf(), model.getRg(), model.getDataNascimento(), model.getMatricula(), model.getEndereco(), model.getTelefone(), model.getDepartamento(), model.getCargo());
+        view.printDetalhesFuncionario(model.getNome(), model.getCpf(), model.getRg(), model.getDataNascimento(), model.getMatricula(), model.getEndereco(), model.getTelefone(), model.getDepartamento(), model.getCargo(), model.isPremiacao());
     }
+    
+    
     
 }

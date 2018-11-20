@@ -57,6 +57,7 @@ public class FolhaPagamentoController {
         view.printDetalhesFolhaPagamento(model.getCampos(), model.getFuncionario(), model.getData(), model.getFuncionario().isPremiacao(), this.calcularSalario());
     }
     
+    //Usa o Strategy Method
     public float calcularSalario() {
         if(this.model.getFuncionario().isPremiacao()) {
             estrategiaSalario = new SalarioComPremiacao();

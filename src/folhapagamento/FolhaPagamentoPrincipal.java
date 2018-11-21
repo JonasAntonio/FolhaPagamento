@@ -10,6 +10,7 @@ import controller.DepartamentoController;
 import controller.FolhaPagamentoController;
 import controller.FuncionarioController;
 import interfaces.Cargo;
+import memento.Filial;
 import model.Campo;
 import model.Departamento;
 import model.Funcionario;
@@ -133,6 +134,23 @@ public class FolhaPagamentoPrincipal {
             folhaPagamentoController = new FolhaPagamentoController(folhaPagamento, folhaPagamentoView);
             folhaPagamentoController.atualizaView();
         }
+        
+        //Memento
+        System.out.println("Filial_--------_");
+        Filial filial = new Filial();
+        filial.adicionarDepartamento(departamento1);
+        filial.adicionarDepartamento(departamento1);
+        filial.adicionarDepartamento(departamento2);
+        filial.adicionarDepartamento(departamento3);
+        
+        System.out.println("Itens adicionados: \n");
+        filial.mostrarDepartamento();
+        
+        filial.desfazer();
+        filial.mostrarDepartamento();
+        filial.desfazer();
+        filial.mostrarDepartamento();
+        System.out.println("_________Aqui acabou!!!! THE END!!!_________");
         
     }
 

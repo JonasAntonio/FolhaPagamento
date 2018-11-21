@@ -5,16 +5,21 @@
  */
 package folhapagamento;
 
+import model.OpcaoPagamentoBancoBrasil;
 import controller.CampoController;
 import controller.DepartamentoController;
 import controller.FolhaPagamentoController;
 import controller.FuncionarioController;
 import interfaces.Cargo;
+import java.util.List;
 import memento.Filial;
 import model.Campo;
 import model.Departamento;
 import model.Funcionario;
 import model.FolhaPagamento;
+import model.OpcaoPagamentoBradesco;
+import model.OpcaoPagamentoDinheiro;
+import model.OpcaoPagamentoItau;
 import model.cargo.CargoAdministrativo;
 import model.cargo.CargoAnalista;
 import model.cargo.CargoGerente;
@@ -89,12 +94,13 @@ public class FolhaPagamentoPrincipal {
         singleton.funcionarios.add(funcionario6);
         
         //Models Folhas de Pagamento
-        FolhaPagamento folhaPagamento1 = new FolhaPagamento(singleton.campos, funcionario1, "2018:09:05");
-        FolhaPagamento folhaPagamento2 = new FolhaPagamento(singleton.campos, funcionario2, "2018:09:05");
-        FolhaPagamento folhaPagamento3 = new FolhaPagamento(singleton.campos, funcionario3, "2018:09:05");
-        FolhaPagamento folhaPagamento4 = new FolhaPagamento(singleton.campos, funcionario4, "2018:09:05");
-        FolhaPagamento folhaPagamento5 = new FolhaPagamento(singleton.campos, funcionario5, "2018:09:05");
-        FolhaPagamento folhaPagamento6 = new FolhaPagamento(singleton.campos, funcionario6, "2018:09:05");
+        FolhaPagamento folhaPagamento1 = new FolhaPagamento(singleton.campos, funcionario1, "2018:09:05", new OpcaoPagamentoDinheiro());
+        FolhaPagamento folhaPagamento2 = new FolhaPagamento(singleton.campos, funcionario2, "2018:09:05", new OpcaoPagamentoBancoBrasil());
+        FolhaPagamento folhaPagamento3 = new FolhaPagamento(singleton.campos, funcionario3, "2018:09:05", new OpcaoPagamentoItau());
+        FolhaPagamento folhaPagamento4 = new FolhaPagamento(singleton.campos, funcionario4, "2018:09:05", new OpcaoPagamentoDinheiro());
+        FolhaPagamento folhaPagamento5 = new FolhaPagamento(singleton.campos, funcionario5, "2018:09:05", new OpcaoPagamentoBradesco());
+        FolhaPagamento folhaPagamento6 = new FolhaPagamento(singleton.campos, funcionario6, "2018:09:05", new OpcaoPagamentoDinheiro());
+
         
         //Inserindo na instancia do singleton
         singleton.folhasPagamentos.add(folhaPagamento1);
@@ -158,6 +164,12 @@ public class FolhaPagamentoPrincipal {
         filial.mostrarDepartamento();
         System.out.println("________________________________");
         
+        //Command
+        System.out.println("\nLiberação do Pagamento\n");
+        List<FolhaPagamento> folhasPagamento = singleton.folhasPagamentos;
+        for(FolhaPagamento folhaPagamento: folhasPagamento){
+            folhaPagamento.processarFolha();
+        }
     }
 
 }

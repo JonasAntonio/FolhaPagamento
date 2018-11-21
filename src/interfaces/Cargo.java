@@ -11,7 +11,7 @@ package interfaces;
  */
 public interface Cargo {
     
-    public void exibirInfo();
+    public String exibirInfo();
     
     public float getSalarioBase();
     

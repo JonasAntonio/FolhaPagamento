@@ -23,8 +23,8 @@ public class CargoAdministrativo implements Cargo {
     }
     
     @Override
-    public void exibirInfo() {
-        System.out.println("Cargo: Administrador de Sistemas");
+    public String exibirInfo() {
+        return "Administrador de Sistemas";
     }
 
     public float getSalarioBase() {

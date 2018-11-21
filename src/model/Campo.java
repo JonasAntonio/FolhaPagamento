@@ -71,7 +71,7 @@ public class Campo {
 
     @Override
     public String toString() {
-        return "Campo{" + "codigo=" + codigo + ", descricao=" + descricao + ", referencia=" + referencia + ", vencimentos=" + vencimentos + ", descontos=" + descontos + '}';
+        return "Campo { " + "Código = " + codigo + ", Descrição = " + descricao + ", Referência = " + referencia + ", Vencimentos = " + vencimentos + ", Descontos = " + descontos + " }";
     }
     
 }

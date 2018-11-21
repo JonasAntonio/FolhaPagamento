@@ -135,15 +135,15 @@ public class Funcionario {
     @Override
     public String toString() {
         return "Funcionario {" + 
-                "\n\tnome=" + nome + 
-                "\n\tcpf=" + cpf + 
-                "\n\trg=" + rg + 
-                "\n\tdataNascimento=" + dataNascimento + 
-                "\n\tmatricula=" + matricula + 
-                "\n\tendereco=" + endereco + 
-                "\n\ttelefone=" + telefone + 
-                "\n\tdepartamento=" + departamento.getNome() + 
-                "\n\tcargo=" + cargo.toString() + "}";
+                "\n\tNome = " + nome + 
+                "\n\tCPF = " + cpf + 
+                "\n\tRG = " + rg + 
+                "\n\tData de Nascimento = " + dataNascimento + 
+                "\n\tMatrícula = " + matricula + 
+                "\n\tEndereco = " + endereco + 
+                "\n\tTelefone = " + telefone + 
+                "\n\tDepartamento = " + departamento.getNome() + 
+                "\n\tCargo = " + cargo.exibirInfo()+ "\n\t}";
     }
 
 }

@@ -23,8 +23,8 @@ public class CargoSuporte implements Cargo {
     }
     
     @Override
-    public void exibirInfo() {
-        System.out.println("Cargo: Suporte de Sistemas");
+    public String exibirInfo() {
+        return "Suporte de Sistemas";
     }
 
     public float getSalarioBase() {

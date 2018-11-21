@@ -136,7 +136,7 @@ public class FolhaPagamentoPrincipal {
         }
         
         //Memento
-        System.out.println("Filial_--------_");
+        System.out.println("Filial:");
         Filial filial = new Filial();
         filial.adicionarDepartamento(departamento1);
         filial.adicionarDepartamento(departamento2);
@@ -145,11 +145,18 @@ public class FolhaPagamentoPrincipal {
         System.out.println("Itens adicionados: \n");
         filial.mostrarDepartamento();
         
+        System.out.println("\nDesfazendo uma operação...");
         filial.desfazer();
+        
+        System.out.println("Itens contidos no memento: \n");
         filial.mostrarDepartamento();
+        
+        System.out.println("\nDesfazendo uma operação...");
         filial.desfazer();
+        
+        System.out.println("Itens contidos no memento: \n");
         filial.mostrarDepartamento();
-        System.out.println("_________Aqui acabou!!!! THE END!!!_________");
+        System.out.println("________________________________");
         
     }
 

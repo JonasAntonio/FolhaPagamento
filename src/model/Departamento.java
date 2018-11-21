@@ -55,7 +55,7 @@ public class Departamento {
 
     @Override
     public String toString() {
-        return "Departamento{" + "nome=" + nome + ", setor=" + setor + ", gerente=" + gerente + '}';
+        return "Departamento { " + "Nome = " + nome + ", Setor = " + setor + ", Gerente = " + gerente + "\n}";
     }
     
 }

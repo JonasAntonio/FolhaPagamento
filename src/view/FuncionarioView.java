@@ -26,7 +26,7 @@ public class FuncionarioView {
         System.out.println("Endereço: " + endereco);
         System.out.println("Telefone: " + telefone);
         System.out.println("Departamento: " + departamento.getNome());
-        cargo.exibirInfo();
+        System.out.println("Cargo: " + cargo.exibirInfo());
         System.out.println("Premiado: " + premiacao);
         System.out.println("________________________________\n");
     }

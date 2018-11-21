@@ -17,7 +17,7 @@ public class DepartamentoView {
         System.out.println("Departamento: ");
         System.out.println("Nome: " + nome);
         System.out.println("Setor: " + setor);
-        System.out.println("Gerente: " + gerente.getMatricula() + "-->" + gerente.getNome() );
+        System.out.println("Gerente: " + gerente.getMatricula() + " --> " + gerente.getNome() );
         System.out.println("________________________________\n");
     }
     

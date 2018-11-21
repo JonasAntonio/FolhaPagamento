@@ -23,8 +23,8 @@ public class CargoAnalista implements Cargo {
     }
     
     @Override
-    public void exibirInfo() {
-        System.out.println("Cargo: Analista de Sistemas");
+    public String exibirInfo() {
+        return "Analista de Sistemas";
     }
 
     public float getSalarioBase() {

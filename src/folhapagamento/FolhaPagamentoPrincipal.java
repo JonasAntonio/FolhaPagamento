@@ -139,7 +139,6 @@ public class FolhaPagamentoPrincipal {
         System.out.println("Filial_--------_");
         Filial filial = new Filial();
         filial.adicionarDepartamento(departamento1);
-        filial.adicionarDepartamento(departamento1);
         filial.adicionarDepartamento(departamento2);
         filial.adicionarDepartamento(departamento3);
         

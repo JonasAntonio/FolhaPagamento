@@ -5,6 +5,8 @@
  */
 package memento;
 
+import java.util.ArrayList;
+import java.util.List;
 import model.Departamento;
 
 /**
@@ -13,25 +15,27 @@ import model.Departamento;
  */
 public class Filial {
     
-    protected Departamento departamento;
+    protected List<Departamento> departamentos;
     FilialCareTaker careTaker;
     
     public Filial() {
         careTaker = new FilialCareTaker();
-        departamento = new Departamento();
+        departamentos = new ArrayList();
     }
     
-    public void adicionarDepartamento(Departamento departamento) {
-        careTaker.adicionarMemento(new FilialMemento(departamento));
-        //falta alguma coisa aqui
+    public void adicionarDepartamento(Departamento novoDepartamento) {
+        careTaker.adicionarMemento(new FilialMemento(novoDepartamento));
+        departamentos.add(novoDepartamento);
     }
     
     public void desfazer() {
-        departamento = careTaker.getUltimoEstadoSalvo().getDepartamentoSalvo();
+        departamentos.remove(careTaker.getUltimoEstadoSalvo().getDepartamentoSalvo());
     }
     
     public void mostrarDepartamento() {
-        System.out.println(this.departamento.toString());
+        for (Departamento departamento : departamentos) {
+            System.out.println(departamento.toString());
+        }
     }
     
 }

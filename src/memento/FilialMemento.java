@@ -12,13 +12,13 @@ import model.Departamento;
  * @author jonas
  */
 public class FilialMemento {
-    protected Departamento departamento;
+    protected Departamento estadoDepartamento;
     
     public FilialMemento(Departamento departamento) {
-        this.departamento = departamento;
+        this.estadoDepartamento = departamento;
     }
     
     public model.Departamento getDepartamentoSalvo() {
-        return departamento;
+        return estadoDepartamento;
     }
 }

@@ -16,7 +16,7 @@ public class FilialCareTaker {
     protected List<FilialMemento> estados;
     
     public FilialCareTaker() {
-        estados = new ArrayList<FilialMemento>();
+        estados = new ArrayList<>();
     }
     
     public void adicionarMemento(FilialMemento memento) {
